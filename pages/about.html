@@ -164,9 +164,7 @@
         </ul>
       </div>
     </div>
-  </nav>
-
-  <!-- Page Header -->
+  </nav><!-- Page Header -->
   <header class="page-header py-5">
     <div class="container">
       <div class="section-label">Project Overview</div>
@@ -192,4 +190,157 @@
             servers, printers, cloud services and IoT devices. The same
             convenience widens the attack surface: anyone in radio range
             can try to join, and an attacker who gets in can scan hosts,
-            intercept traffic, spoof addresses or move to other 
+            intercept traffic, spoof addresses or move to other devices.
+          </p>
+
+          <p>
+            Router firewalls apply fixed rules, MAC addresses can be
+            cloned, and signature-based tools such as Snort and Suricata
+            miss new or modified attacks and need expert tuning.
+            Anomaly-based detection builds a profile of normal behavior
+            and flags significant deviations, so it can catch attacks
+            with no known signature.
+          </p>
+        </div>
+
+        <div class="col-lg-6">
+          <p>
+            Common datasets (NSL-KDD, CICIDS2017, UNSW-NB15) come from
+            large or simulated enterprise networks, and models trained
+            on them can produce many false alarms elsewhere. Two gaps
+            motivate this study:
+          </p>
+
+          <ul>
+            <li>
+              Unauthorized devices and abnormal traffic in small LANs
+              are rarely noticed, because no tool compares current
+              activity with what is normal for that network.
+            </li>
+            <li>
+              Many AI-based IDS studies stop at offline evaluation and
+              never deliver a real-time system a non-expert administrator
+              can use.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="study-image mt-4">
+        <img src="../assets/images/system-flow.svg"
+          class="img-fluid"
+          alt="Flow from LAN traffic to feature extraction, anomaly model and alert dashboard">
+      </div>
+    </div>
+  </section>
+
+  <!-- Statement of the Problem -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="section-label">02 / Research Problem</div>
+      <h2 class="fw-bold mb-4">Statement of the Problem</h2>
+
+      <p class="lead-narrow">
+        Wi-Fi passwords, firewalls and MAC filtering focus on prevention
+        or predefined rules and do not continuously analyze network
+        behavior. Small and medium LANs often lack security staff and
+        affordable monitoring tools, which raises their exposure to
+        data theft, service disruption and compromise. Specifically,
+        the study asks:
+      </p>
+
+      <ol class="lead-narrow">
+        <li>
+          How can the normal behavior of a LAN be profiled from
+          passively captured traffic and device activity?
+        </li>
+        <li>
+          How effectively can a machine learning model separate
+          abnormal traffic and unauthorized devices from that baseline?
+        </li>
+        <li>
+          How well does the system perform against simulated attacks
+          and benchmark data, in terms of detection accuracy, false
+          alarms and processing overhead?
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Objectives -->
+  <section class="py-5">
+    <div class="container">
+      <div class="section-label">03 / Research Goals</div>
+      <h2 class="fw-bold mb-4">Objectives</h2></li>
+              <li>
+                Machine learning-based detection of unauthorized
+                devices and abnormal traffic such as port scanning,
+                ARP spoofing and flooding.
+              </li>
+              <li>
+                A web-based dashboard for alerts, logs and basic reports.
+              </li>
+              <li>
+                Testing in a controlled environment using simulated
+                attacks and public datasets.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="panel h-100">
+            <h3 class="h5 mb-3">
+              <i class="bi bi-exclamation-triangle accent me-2"></i>
+              Limitations
+            </h3>
+
+            <ul>
+              <li>Detects and alerts only. It does not block devices or traffic.</li>
+              <li>
+                Encrypted payload contents are out of scope; analysis
+                uses traffic metadata and behavior.
+              </li>
+              <li>
+                Designed for small to medium LANs and may not scale
+                to enterprise or ISP-level networks.
+              </li>
+              <li>
+                Accuracy depends on the quality of the training data,
+                and a model may need retraining on another network.
+              </li>
+              <li>
+                Evaluation covers only the simulated attack types
+                and not all possible threats.
+              </li>
+              <li>
+                Wireless-layer attacks needing specialized radio
+                hardware (such as deauthentication floods) are limited
+                to what the available equipment can capture.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-light py-4 mt-5">
+    <div class="container d-flex flex-column flex-md-row
+      justify-content-between align-items-center gap-2">
+
+      <span>&copy; 2026 LAN Sentinel. A student concept paper project.</span>
+
+      <span class="small">
+        <a href="about.html">About</a> &nbsp;
+        <a href="literature.html">Literature</a> &nbsp;
+        <a href="contact.html">Contact</a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
