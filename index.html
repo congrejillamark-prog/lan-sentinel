@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LAN Sentinel | Home</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/project.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-shield-check text-brand"></i> LAN Sentinel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2"><li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="pages/about.html">About</a></li><li class="nav-item"><a class="nav-link" href="pages/literature.html">Literature</a></li><li class="nav-item"><a class="nav-link" href="pages/dashboard.html">Dashboard</a></li><li class="nav-item"><a class="nav-link" href="pages/contact.html">Contact</a></li>
+          <li class="nav-item"><a class="btn btn-outline-secondary btn-sm" href="pages/login.html">Login</a></li>
+          <li class="nav-item"><a class="btn btn-brand btn-sm" href="pages/signup.html">Sign Up</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero"><div class="container"><div class="row align-items-center g-5">
+    <div class="col-lg-7 text-center text-lg-start">
+      <h1 class="display-4 fw-bold">Know when something on your network is not normal.</h1>
+      <p class="lead my-4">A lightweight AI intrusion detection system that learns how a Wi-Fi local area network normally behaves, then alerts the administrator when a device or traffic pattern does not fit.</p>
+      <a href="pages/dashboard.html" class="btn btn-brand btn-lg me-2">View sample dashboard</a>
+      <a href="pages/about.html" class="btn btn-outline-light btn-lg">Read the concept</a>
+    </div>
+    <div class="col-lg-5"><img src="assets/images/traffic-anomaly-dark.svg" class="img-fluid" alt="Chart of network traffic inside a normal range with one spike flagged as unusual"></div>
+  </div></div></header>
+
+  <section id="features" class="py-5"><div class="container py-4">
+    <div class="text-center mb-5"><h2 class="fw-bold">How it works</h2><p class="text-muted">Three steps from raw traffic to a useful alert.</p></div>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="card h-100 border-0 shadow-sm card-hover text-center p-4"><span class="feature-icon mx-auto mb-3"><i class="bi bi-hdd-network"></i></span><h5>Capture</h5><p class="text-muted mb-0">Passively collects LAN traffic and extracts packet rates, packet sizes, protocol mix and MAC/IP activity.</p></div></div>
+      <div class="col-md-4"><div class="card h-100 border-0 shadow-sm card-hover text-center p-4"><span class="feature-icon mx-auto mb-3"><i class="bi bi-cpu"></i></span><h5>Learn</h5><p class="text-muted mb-0">Builds a baseline of normal traffic and known device behavior with machine learning.</p></div></div>
+      <div class="col-md-4"><div class="card h-100 border-0 shadow-sm card-hover text-center p-4"><span class="feature-icon mx-auto mb-3"><i class="bi bi-bell"></i></span><h5>Alert</h5><p class="text-muted mb-0">Flags anomalies and unauthorized devices and shows them to the administrator on a dashboard.</p></div></div>
+    </div></div></section>
+
+  <section class="py-5 bg-white"><div class="container py-4"><div class="row align-items-center g-5">
+    <div class="col-lg-6"><img src="assets/images/traffic-anomaly.svg" class="img-fluid" alt="Traffic chart with one anomaly highlighted"></div>
+    <div class="col-lg-6">
+      <h2 class="fw-bold">Why a baseline matters</h2>
+      <p class="text-muted">Firewalls apply fixed rules and signature-based tools miss new attacks. Small networks rarely have a tool that compares current activity with what is normal for that specific network.</p>
+      <ul class="list-unstyled">
+        <li class="mb-2"><i class="bi bi-check-circle-fill text-brand me-2"></i>Profiles normal behavior of one specific LAN</li>
+        <li class="mb-2"><i class="bi bi-check-circle-fill text-brand me-2"></i>Flags unauthorized devices and abnormal traffic</li>
+        <li class="mb-2"><i class="bi bi-check-circle-fill text-brand me-2"></i>Works for administrators without a security team</li>
+      </ul>
+    </div></div></div></section>
+
+  <section id="attacks" class="py-5"><div class="container py-4">
+    <div class="text-center mb-5"><h2 class="fw-bold">Tested against four simulated attacks</h2></div>
+    <div class="row g-4"><div class="col-md-6 col-lg-3"><div class="card h-100 border-0 shadow-sm card-hover p-4"><span class="feature-icon mb-3"><i class="bi bi-search"></i></span><h5>Port scanning</h5><p class="text-muted mb-0">A host probes other devices for open ports.</p></div></div><div class="col-md-6 col-lg-3"><div class="card h-100 border-0 shadow-sm card-hover p-4"><span class="feature-icon mb-3"><i class="bi bi-arrow-left-right"></i></span><h5>ARP spoofing</h5><p class="text-muted mb-0">A device forges ARP replies to intercept traffic.</p></div></div><div class="col-md-6 col-lg-3"><div class="card h-100 border-0 shadow-sm card-hover p-4"><span class="feature-icon mb-3"><i class="bi bi-lightning-charge"></i></span><h5>DoS flooding</h5><p class="text-muted mb-0">Traffic is flooded to disrupt a service.</p></div></div><div class="col-md-6 col-lg-3"><div class="card h-100 border-0 shadow-sm card-hover p-4"><span class="feature-icon mb-3"><i class="bi bi-phone"></i></span><h5>Unauthorized device</h5><p class="text-muted mb-0">An unknown device joins the Wi-Fi network.</p></div></div></div>
+    <div class="text-center mt-5"><p class="text-muted mb-2">Results are measured by</p><span class="badge text-bg-light border me-1 mb-1 fs-6 fw-normal">Accuracy</span><span class="badge text-bg-light border me-1 mb-1 fs-6 fw-normal">Precision</span><span class="badge text-bg-light border me-1 mb-1 fs-6 fw-normal">Recall</span><span class="badge text-bg-light border me-1 mb-1 fs-6 fw-normal">F1-score</span><span class="badge text-bg-light border me-1 mb-1 fs-6 fw-normal">False-positive rate</span><span class="badge text-bg-light border me-1 mb-1 fs-6 fw-normal">Processing overhead</span></div>
+  </div></section>
+
+  <section class="py-5 bg-white text-center"><div class="container py-3">
+    <h2 class="fw-bold">Want the full study?</h2>
+    <p class="text-muted">Objectives, scope, related literature and references are all here.</p>
+    <a href="pages/about.html" class="btn btn-brand me-2">About the study</a><a href="pages/literature.html" class="btn btn-outline-secondary">Related literature</a>
+  </div></section>
+
+  <footer class="bg-dark text-light py-4 mt-5">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <span>&copy; 2026 LAN Sentinel. A student concept paper project.</span>
+      <span class="small"><a class="text-light" href="pages/about.html">About</a> &nbsp; <a class="text-light" href="pages/literature.html">Literature</a> &nbsp; <a class="text-light" href="pages/contact.html">Contact</a></span>
+    </div>
+  </footer>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
