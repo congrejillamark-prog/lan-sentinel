@@ -4,41 +4,192 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LAN Sentinel | About</title>
+
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
   <link href="../assets/css/bootstrap-icons.min.css" rel="stylesheet">
   <link href="../assets/css/style.css" rel="stylesheet">
   <link href="../assets/css/project.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #080808;
+      color: #e5e5e5;
+    }
+
+    .navbar {
+      background: #111 !important;
+      border-bottom: 1px solid #292929;
+    }
+
+    .navbar-brand,
+    .navbar .nav-link {
+      color: #f5f5f5 !important;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link.active {
+      color: #ff3030 !important;
+    }
+
+    .navbar-toggler {
+      border-color: #444;
+    }
+
+    .navbar-toggler-icon {
+      filter: invert(1);
+    }
+
+    .page-header {
+      background: linear-gradient(120deg, #160303, #101010 65%, #080808);
+      border-bottom: 1px solid #303030;
+    }
+
+    .page-header h1 {
+      color: #fff;
+    }
+
+    .page-header p {
+      color: #aaa !important;
+    }
+
+    section {
+      background: #080808;
+    }
+
+    section.bg-white {
+      background: #101010 !important;
+    }
+
+    h2, h3, h4, h5 {
+      color: #fff;
+    }
+
+    p, li {
+      color: #c5c5c5;
+      line-height: 1.8;
+    }
+
+    strong {
+      color: #fff;
+    }
+
+    .panel {
+      background: #151515;
+      border: 1px solid #303030;
+      border-left: 3px solid #e50914;
+      border-radius: 10px;
+      padding: 24px;
+    }
+
+    .panel h3 i {
+      color: #e50914 !important;
+    }
+
+    .study-image {
+      background: #111;
+      border: 1px solid #303030;
+      border-radius: 12px;
+      padding: 15px;
+    }
+
+    .accent {
+      color: #ff3030;
+    }
+
+    .section-label {
+      color: #ff3030;
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .footer {
+      background: #111 !important;
+      border-top: 1px solid #303030;
+    }
+
+    .footer a {
+      color: #ccc !important;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: #ff3030 !important;
+    }
+
+    @media (max-width: 768px) {
+      .page-header {
+        padding: 40px 0 !important;
+      }
+
+      section {
+        padding: 40px 0 !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg shadow-sm sticky-top">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="../index.html"><i class="bi bi-shield-check text-brand"></i> LAN Sentinel</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <a class="navbar-brand fw-bold" href="../index.html">
+        <i class="bi bi-shield-check accent"></i> LAN Sentinel
+      </a>
+
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
       <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2"><li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li><li class="nav-item"><a class="nav-link active" href="about.html">About</a></li><li class="nav-item"><a class="nav-link" href="literature.html">Literature</a></li><li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li><li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <li class="nav-item"><a class="btn btn-outline-secondary btn-sm" href="../pages/login.html">Login</a></li>
-          <li class="nav-item"><a class="btn btn-brand btn-sm" href="../pages/signup.html">Sign Up</a></li>
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="literature.html">Literature</a></li>
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item">
+            <a class="btn btn-outline-secondary btn-sm" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-brand btn-sm" href="signup.html">Sign Up</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
-<header class="py-5 bg-white border-bottom"><div class="container"><h1 class="fw-bold">About the study</h1><p class="lead text-muted mb-0 lead-narrow">Development of an AI-Based Network Intrusion Detection System for Local Area Networks Using Traffic Anomaly Analysis.</p></div></header><section class="py-5 "><div class="container"><h2 class="fw-bold mb-4">Background</h2><div class="row g-4"><div class="col-lg-6"><p>Local area networks, especially Wi-Fi networks in schools, small offices and homes, are the main way people reach file servers, printers, cloud services and IoT devices. The same convenience widens the attack surface: anyone in radio range can try to join, and an attacker who gets in can scan hosts, intercept traffic, spoof addresses or move to other devices.</p>
-<p>Router firewalls apply fixed rules, MAC addresses can be cloned, and signature-based tools such as Snort and Suricata miss new or modified attacks and need expert tuning. Anomaly-based detection builds a profile of normal behavior and flags significant deviations, so it can catch attacks with no known signature.</p></div>
-<div class="col-lg-6"><p>Common datasets (NSL-KDD, CICIDS2017, UNSW-NB15) come from large or simulated enterprise networks, and models trained on them can produce many false alarms elsewhere. Two gaps motivate this study:</p>
-<ul><li>Unauthorized devices and abnormal traffic in small LANs are rarely noticed, because no tool compares current activity with what is normal for that network.</li>
-<li>Many AI-based IDS studies stop at offline evaluation and never deliver a real-time system a non-expert administrator can use.</li></ul></div></div>
-<img src="../assets/images/system-flow.svg" class="img-fluid mt-4" alt="Flow from LAN traffic to feature extraction, anomaly model and alert dashboard"></div></section><section class="py-5 bg-white"><div class="container"><h2 class="fw-bold mb-4">Statement of the problem</h2><p class="lead-narrow">Wi-Fi passwords, firewalls and MAC filtering focus on prevention or predefined rules and do not continuously analyze network behavior. Small and medium LANs often lack security staff and affordable monitoring tools, which raises their exposure to data theft, service disruption and compromise. Specifically, the study asks:</p>
-<ol class="lead-narrow"><li>How can the normal behavior of a LAN be profiled from passively captured traffic and device activity?</li><li>How effectively can a machine learning model separate abnormal traffic and unauthorized devices from that baseline?</li><li>How well does the system perform against simulated attacks and benchmark data, in terms of detection accuracy, false alarms and processing overhead?</li></ol></div></section><section class="py-5 "><div class="container"><h2 class="fw-bold mb-4">Objectives</h2><p class="lead-narrow"><strong>General objective.</strong> To develop an AI-based network intrusion detection system for local area networks that uses traffic anomaly analysis to detect unauthorized devices and abnormal network activity.</p>
-<p class="mb-1"><strong>Specific objectives</strong></p><ol class="lead-narrow"><li>Capture and prepare LAN traffic (normal and simulated attack) by extracting flow-level and device-level features such as packet rates, packet sizes, protocol mix and MAC/IP activity.</li>
-<li>Build a detection system that (a) learns a baseline profile of normal traffic and known device behavior, and (b) flags deviations as anomalies or unauthorized devices and shows them to the administrator on a dashboard.</li>
-<li>Test the system against simulated attacks (port scanning, ARP spoofing, traffic flooding) and public datasets, using accuracy, precision, recall, F1-score, false-positive rate and processing overhead.</li></ol></div></section><section class="py-5 bg-white"><div class="container"><h2 class="fw-bold mb-4">Significance of the study</h2><div class="row g-4"><div class="col-md-6"><div class="panel h-100"><h3 class="h5"><i class="bi bi-people text-brand me-2"></i>Network administrators and IT staff</h3><p class="mb-0">An automated way to monitor activity and be alerted to anomalies and unauthorized devices on a dashboard.</p></div></div><div class="col-md-6"><div class="panel h-100"><h3 class="h5"><i class="bi bi-building text-brand me-2"></i>Schools and small organizations</h3><p class="mb-0">A practical, lightweight monitoring approach whose processing overhead is measured in this study.</p></div></div><div class="col-md-6"><div class="panel h-100"><h3 class="h5"><i class="bi bi-wifi text-brand me-2"></i>Network users</h3><p class="mb-0">Better detection of unauthorized devices and abnormal traffic helps reduce the risk to their data and service.</p></div></div><div class="col-md-6"><div class="panel h-100"><h3 class="h5"><i class="bi bi-code-slash text-brand me-2"></i>Future developers</h3><p class="mb-0">The system design and evaluation setup can be a starting point for future work in other network environments.</p></div></div></div></div></section><section class="py-5 "><div class="container"><h2 class="fw-bold mb-4">Scope and limitations</h2><div class="row g-4"><div class="col-md-6"><h3 class="h5">Scope</h3><ul><li>Monitoring traffic within a single LAN, including its Wi-Fi segment, through passive packet capture (for example, a mirrored port or a monitoring host).</li><li>Machine learning-based detection of unauthorized devices and abnormal traffic such as port scanning, ARP spoofing and flooding.</li><li>A web-based dashboard for alerts, logs and basic reports.</li><li>Testing in a controlled environment using simulated attacks and public datasets.</li></ul></div><div class="col-md-6"><h3 class="h5">Limitations</h3><ul><li>Detects and alerts only. It does not block devices or traffic.</li><li>Encrypted payload contents are out of scope; analysis uses traffic metadata and behavior.</li><li>Designed for small to medium LANs and may not scale to enterprise or ISP-level networks.</li><li>Accuracy depends on the quality of the training data, and a model may need retraining on another network.</li><li>Evaluation covers only the simulated attack types and not all possible threats.</li><li>Wireless-layer attacks needing specialized radio hardware (such as deauthentication floods) are limited to what the available equipment can capture.</li></ul></div></div></div></section>
-  <footer class="bg-dark text-light py-4 mt-5">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
-      <span>&copy; 2026 LAN Sentinel. A student concept paper project.</span>
-      <span class="small"><a class="text-light" href="../pages/about.html">About</a> &nbsp; <a class="text-light" href="../pages/literature.html">Literature</a> &nbsp; <a class="text-light" href="../pages/contact.html">Contact</a></span>
+
+  <!-- Page Header -->
+  <header class="page-header py-5">
+    <div class="container">
+      <div class="section-label">Project Overview</div>
+      <h1 class="fw-bold display-5">About the Study</h1>
+      <p class="lead mb-0" style="max-width:800px;">
+        Development of an AI-Based Network Intrusion Detection System
+        for Local Area Networks Using Traffic Anomaly Analysis.
+      </p>
     </div>
-  </footer>
-  <script src="../assets/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+  </header>
+
+  <!-- Background -->
+  <section class="py-5">
+    <div class="container">
+      <div class="section-label">01 / Introduction</div>
+      <h2 class="fw-bold mb-4">Background</h2>
+
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <p>
+            Local area networks, especially Wi-Fi networks in schools,
+            small offices and homes, are the main way people reach file
+            servers, printers, cloud services and IoT devices. The same
+            convenience widens the attack surface: anyone in radio range
+            can try to join, and an attacker who gets in can scan hosts,
+            intercept traffic, spoof addresses or move to other 
