@@ -1,63 +1,213 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LAN Sentinel | Login</title>
+
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
   <link href="../assets/css/bootstrap-icons.min.css" rel="stylesheet">
   <link href="../assets/css/style.css" rel="stylesheet">
   <link href="../assets/css/project.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #080808;
+      color: #f5f5f5;
+    }
+
+    .auth-wrapper {
+      min-height: 100vh;
+    }
+
+    .auth-image {
+      background:
+        linear-gradient(to top, rgba(0,0,0,.95), rgba(0,0,0,.15)),
+        url("../images/login-bg.jpg") center/cover no-repeat,
+        #151515;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .auth-image::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(229,9,20,.25), transparent 65%);
+      pointer-events: none;
+    }
+
+    .auth-image > div {
+      position: relative;
+      z-index: 1;
+    }
+
+    .login-panel {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+    }
+
+    .login-panel h3 {
+      color: #fff;
+    }
+
+    .login-panel p {
+      color: #a1a1aa;
+    }
+
+    .login-brand {
+      color: #fff !important;
+    }
+
+    .login-brand i {
+      color: #e50914;
+    }
+
+    .form-label {
+      color: #e5e5e5;
+    }
+
+    .input-group-text {
+      background: #1e1e1e;
+      color: #e50914;
+      border-color: #333;
+    }
+
+    .form-control {
+      background: #151515;
+      color: #fff;
+      border-color: #333;
+    }
+
+    .form-control:focus {
+      background: #151515;
+      color: #fff;
+      border-color: #e50914;
+      box-shadow: 0 0 0 .2rem rgba(229,9,20,.15);
+    }
+
+    .form-control::placeholder {
+      color: #777;
+    }
+
+    .form-check-label {
+      color: #aaa;
+    }
+
+    .form-check-input {
+      background-color: #151515;
+      border-color: #555;
+    }
+
+    .form-check-input:checked {
+      background-color: #e50914;
+      border-color: #e50914;
+    }
+
+    .login-panel a:not(.navbar-brand) {
+      color: #ff3030;
+      text-decoration: none;
+    }
+
+    .login-panel a:not(.navbar-brand):hover {
+      color: #ff6666;
+      text-decoration: underline;
+    }
+
+    .btn-login {
+      background: #e50914;
+      color: #fff;
+      border: none;
+      font-weight: 600;
+      transition: .2s ease;
+    }
+
+    .btn-login:hover {
+      background: #b80710;
+      color: #fff;
+      box-shadow: 0 0 18px rgba(229,9,20,.25);
+    }
+
+    .password-toggle {
+      background: #1e1e1e;
+      color: #aaa;
+      border: 1px solid #333;
+      border-left: 0;
+    }
+
+    .password-toggle:hover {
+      color: #e50914;
+    }
+
+    @media (max-width: 991px) {
+      .auth-image {
+        min-height: 280px;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <div class="container-fluid">
     <div class="row auth-wrapper">
+
       <!-- Image side -->
       <div class="col-lg-6 auth-image login d-flex align-items-end p-5">
         <div class="text-white">
+          <span class="badge mb-3" style="background:#e50914;">
+            <i class="bi bi-shield-lock"></i> NETWORK SECURITY
+          </span>
           <h2 class="fw-bold">Welcome back, administrator.</h2>
-          <p class="mb-0">Check what your network has been doing.</p>
+          <p class="mb-0 text-light">
+            Monitor your network. Detect threats. Stay protected.
+          </p>
         </div>
       </div>
 
-      <!-- Form side -->
+      <!-- Login form -->
       <div class="col-lg-6 d-flex align-items-center justify-content-center py-5">
-        <div class="w-100" style="max-width: 400px;">
-          <a href="../index.html" class="navbar-brand fw-bold fs-4 text-decoration-none text-dark d-block mb-4"><i class="bi bi-shield-check text-brand"></i> LAN Sentinel</a>
-          <h3 class="fw-bold">Login</h3>
-          <p class="text-muted">Enter your account details below.</p>
+        <div class="login-panel">
 
-          <form>
+          <a href="../index.html"
+             class="navbar-brand login-brand fw-bold fs-4 text-decoration-none d-block mb-4">
+            <i class="bi bi-shield-check"></i> LAN Sentinel
+          </a>
+
+          <h3 class="fw-bold">Login</h3>
+          <p>Enter your account details below.</p>
+
+          <form id="loginForm">
+
             <div class="mb-3">
               <label for="email" class="form-label">Email address</label>
               <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                <span class="input-group-text">
+                  <i class="bi bi-envelope"></i>
+                </span>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="name@example.com"
+                  required
+                >
               </div>
             </div>
+
             <div class="mb-3">
               <label for="password" class="form-label">Password</label>
               <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-lock"></i></span>
-                <input type="password" class="form-control" id="password" placeholder="Password">
-              </div>
-            </div>
-            <div class="d-flex justify-content-between mb-4">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="remember">
-                <label class="form-check-label" for="remember">Remember me</label>
-              </div>
-              <a href="#" class="small">Forgot password?</a>
-            </div>
-            <a href="dashboard.html" class="btn btn-brand w-100 py-2">Login</a>
-          </form>
-
-          <p class="text-center mt-4 mb-0">No account yet? <a href="signup.html">Sign up</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script src="../assets/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+                <span class="input-group-text">
+                  <i class="bi bi-lock"></i>
+                </span>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Password"
+                  required
+                >
+                <button
+               
