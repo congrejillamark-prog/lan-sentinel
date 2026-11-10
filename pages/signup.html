@@ -1,77 +1,225 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LAN Sentinel | Sign Up</title>
+
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
   <link href="../assets/css/bootstrap-icons.min.css" rel="stylesheet">
   <link href="../assets/css/style.css" rel="stylesheet">
   <link href="../assets/css/project.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #080808;
+    }
+
+    .auth-wrapper {
+      min-height: 100vh;
+    }
+
+    .signup-form {
+      max-width: 460px;
+      width: 100%;
+    }
+
+    .auth-image.signup {
+      position: relative;
+      min-height: 100vh;
+      background:
+        linear-gradient(135deg, rgba(0,0,0,.94), rgba(100,0,0,.72)),
+        url("../assets/images/signup.jpg") center/cover no-repeat !important;
+      border-left: 1px solid #360000;
+    }
+
+    .brand-logo {
+      color: #fff !important;
+      letter-spacing: 1px;
+    }
+
+    .brand-logo i {
+      color: #e50914;
+    }
+
+    .form-control,
+    .form-select {
+      background: #151515 !important;
+      color: #fff !important;
+      border: 1px solid #383838;
+      padding: 11px;
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+      border-color: #e50914;
+      box-shadow: 0 0 0 .2rem rgba(229,9,20,.15);
+    }
+
+    .form-control::placeholder {
+      color: #777;
+    }
+
+    .form-label {
+      color: #ddd;
+      font-size: .9rem;
+    }
+
+    .form-check-input {
+      background-color: #222;
+      border-color: #555;
+    }
+
+    .form-check-input:checked {
+      background-color: #e50914;
+      border-color: #e50914;
+    }
+
+    .btn-signup {
+      background: #e50914;
+      color: #fff;
+      border: none;
+      transition: .2s;
+    }
+
+    .btn-signup:hover {
+      background: #a00008;
+      color: #fff;
+      box-shadow: 0 0 18px rgba(229,9,20,.3);
+    }
+
+    .password-wrap {
+      position: relative;
+    }
+
+    .password-wrap .form-control {
+      padding-right: 42px;
+    }
+
+    .password-toggle {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #aaa;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    .password-toggle:hover {
+      color: #e50914;
+    }
+
+    .auth-heading {
+      color: #fff;
+    }
+
+    .auth-description,
+    .login-text {
+      color: #999;
+    }
+
+    .auth-link {
+      color: #ff3030;
+      text-decoration: none;
+    }
+
+    .auth-link:hover {
+      color: #ff7777;
+    }
+
+    .image-content {
+      max-width: 480px;
+    }
+
+    .image-content h2 {
+      font-size: 2.8rem;
+    }
+
+    .image-line {
+      width: 65px;
+      height: 4px;
+      background: #e50914;
+      margin-bottom: 20px;
+    }
+
+    @media(max-width: 991px) {
+      .auth-image.signup {
+        min-height: 260px;
+        border-left: none;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <div class="container-fluid">
-    <div class="row auth-wrapper">
-      <!-- Form side -->
-      <div class="col-lg-6 d-flex align-items-center justify-content-center py-5 order-2 order-lg-1">
-        <div class="w-100" style="max-width: 440px;">
-          <a href="../index.html" class="navbar-brand fw-bold fs-4 text-decoration-none text-dark d-block mb-4"><i class="bi bi-shield-check text-brand"></i> LAN Sentinel</a>
-          <h3 class="fw-bold">Create your account</h3>
-          <p class="text-muted">It only takes a minute.</p>
 
-          <form>
-            <div class="row g-3 mb-3">
-              <div class="col-sm-6">
-                <label for="first" class="form-label">First name</label>
-                <input type="text" class="form-control" id="first" placeholder="Juan">
-              </div>
-              <div class="col-sm-6">
-                <label for="last" class="form-label">Last name</label>
-                <input type="text" class="form-control" id="last" placeholder="Dela Cruz">
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="email" placeholder="name@example.com">
-            </div>
-            <div class="mb-3">
-              <label for="course" class="form-label">Role</label>
-              <select class="form-select" id="course">
-                <option selected>Choose...</option>
-                <option>Network administrator</option><option>IT staff</option><option>Student researcher</option>
-              </select>
-            </div>
-            <div class="row g-3 mb-3">
-              <div class="col-sm-6">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password">
-              </div>
-              <div class="col-sm-6">
-                <label for="confirm" class="form-label">Confirm password</label>
-                <input type="password" class="form-control" id="confirm">
-              </div>
-            </div>
-            <div class="form-check mb-4">
-              <input class="form-check-input" type="checkbox" id="terms">
-              <label class="form-check-label" for="terms">I agree to the <a href="#">Terms &amp; Conditions</a></label>
-            </div>
-            <a href="login.html" class="btn btn-brand w-100 py-2">Sign Up</a>
-          </form>
+<div class="container-fluid">
+  <div class="row auth-wrapper">
 
-          <p class="text-center mt-4 mb-0">Already have an account? <a href="login.html">Login</a></p>
-        </div>
-      </div>
+    <!-- Form Section -->
+    <div class="col-lg-6 d-flex align-items-center justify-content-center py-5 px-4 order-2 order-lg-1">
 
-      <!-- Image side -->
-      <div class="col-lg-6 auth-image signup d-flex align-items-end p-5 order-1 order-lg-2">
-        <div class="text-white">
-          <h2 class="fw-bold">Protect your LAN</h2>
-          <p class="mb-0">Set up an administrator account to monitor your network.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script src="../assets/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+      <div class="signup-form">
+
+        <a href="../index.html"
+           class="brand-logo fw-bold fs-4 text-decoration-none d-block mb-4">
+          <i class="bi bi-shield-check"></i> LAN SENTINEL
+        </a>
+
+        <h3 class="auth-heading fw-bold">Create your account</h3>
+
+        <p class="auth-description mb-4">
+          Join LAN Sentinel and take control of your network security.
+        </p>
+
+        <form action="login.html" method="get">
+
+          <!-- Name -->
+          <div class="row g-3 mb-3">
+
+            <div class="col-sm-6">
+              <label for="first" class="form-label">First name</label>
+              <input type="text"
+                     class="form-control"
+                     id="first"
+                     name="first"
+                     placeholder="Juan"
+                     required>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="last" class="form-label">Last name</label>
+              <input type="text"
+                     class="form-control"
+                     id="last"
+                     name="last"
+                     placeholder="Dela Cruz"
+                     required>
+            </div>
+
+          </div>
+
+          <!-- Email -->
+          <div class="mb-3">
+
+            <label for="email" class="form-label">Email address</label>
+
+            <input type="email"
+                   class="form-control"
+                   id="email"
+                   name="email"
+                   placeholder="name@example.com"
+                   required>
+
+          </div>
+
+          <!-- Role -->
+          <div class="mb-3">
+
+            <label for="course" class="form-label">Role</label>
+
+            <select class="form-select" id="course" name="role" required>
+              <option value="" selected disabled>Choose your role</op
