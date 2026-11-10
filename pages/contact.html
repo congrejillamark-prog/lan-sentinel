@@ -4,41 +4,348 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LAN Sentinel | Contact</title>
+
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
   <link href="../assets/css/bootstrap-icons.min.css" rel="stylesheet">
   <link href="../assets/css/style.css" rel="stylesheet">
   <link href="../assets/css/project.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #080808;
+      color: #e5e5e5;
+    }
+
+    .navbar {
+      background: #111 !important;
+      border-bottom: 1px solid #303030;
+    }
+
+    .navbar-brand,
+    .navbar .nav-link {
+      color: #f5f5f5 !important;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link.active {
+      color: #ff3030 !important;
+    }
+
+    .navbar-toggler {
+      border-color: #444;
+    }
+
+    .navbar-toggler-icon {
+      filter: invert(1);
+    }
+
+    .page-header {
+      background: linear-gradient(120deg, #180303, #101010 65%, #080808);
+      border-bottom: 1px solid #303030;
+    }
+
+    .page-header h1 {
+      color: #fff;
+    }
+
+    .page-header p {
+      color: #aaa !important;
+    }
+
+    .researchers-section {
+      background: #080808;
+    }
+
+    h2, h3 {
+      color: #fff;
+    }
+
+    .researcher-list {
+      background: transparent;
+    }
+
+    .researcher-list .list-group-item {
+      background: #151515 !important;
+      color: #ddd;
+      border: 1px solid #303030;
+      padding: 16px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+    }
+
+    .researcher-list i {
+      color: #e50914 !important;
+    }
+
+    .contact-panel {
+      background: #151515;
+      border: 1px solid #303030;
+      border-top: 3px solid #e50914;
+      border-radius: 12px;
+      padding: 28px;
+    }
+
+    .form-label {
+      color: #e5e5e5;
+    }
+
+    .form-control {
+      background: #0d0d0d;
+      color: #fff;
+      border: 1px solid #383838;
+    }
+
+    .form-control:focus {
+      background: #0d0d0d;
+      color: #fff;
+      border-color: #e50914;
+      box-shadow: 0 0 0 .2rem rgba(229, 9, 20, .15);
+    }
+
+    .form-control::placeholder {
+      color: #777;
+    }
+
+    .form-control:focus-visible {
+      outline: none;
+    }
+
+    .btn-send {
+      background: #e50914;
+      color: #fff;
+      border: none;
+      font-weight: 600;
+      padding: 12px;
+      transition: .2s ease;
+    }
+
+    .btn-send:hover {
+      background: #b80710;
+      color: #fff;
+      box-shadow: 0 0 18px rgba(229, 9, 20, .25);
+    }
+
+    .text-muted {
+      color: #999 !important;
+    }
+
+    .accent {
+      color: #ff3030;
+    }
+
+    .section-label {
+      color: #ff3030;
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .footer {
+      background: #111 !important;
+      border-top: 1px solid #303030;
+    }
+
+    .footer a {
+      color: #ccc !important;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: #ff3030 !important;
+    }
+
+    @media (max-width: 768px) {
+      .page-header {
+        padding: 40px 0 !important;
+      }
+
+      .contact-panel {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg shadow-sm sticky-top">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="../index.html"><i class="bi bi-shield-check text-brand"></i> LAN Sentinel</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2"><li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="about.html">About</a></li><li class="nav-item"><a class="nav-link" href="literature.html">Literature</a></li><li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li><li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
-          <li class="nav-item"><a class="btn btn-outline-secondary btn-sm" href="../pages/login.html">Login</a></li>
-          <li class="nav-item"><a class="btn btn-brand btn-sm" href="../pages/signup.html">Sign Up</a></li>
+
+      <a class="navbar-brand fw-bold" href="../index.html">
+        <i class="bi bi-shield-check accent"></i> LAN Sentinel
+      </a>
+
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav"><ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="literature.html">Literature</a></li>
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+
+          <li class="nav-item">
+            <a class="btn btn-outline-secondary btn-sm" href="login.html">Login</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="btn btn-brand btn-sm" href="signup.html">Sign Up</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
-<header class="py-5 bg-white border-bottom"><div class="container"><h1 class="fw-bold">Contact the team</h1><p class="lead text-muted mb-0 lead-narrow">Questions about the study? Send us a message.</p></div></header>
-  <section class="py-5"><div class="container"><div class="row g-5">
-    <div class="col-md-5"><h2 class="fw-bold">Researchers</h2><ul class="list-group list-group-flush"><li class="list-group-item bg-transparent"><i class="bi bi-person text-brand me-2"></i>Congrejilla, Mark Jhon</li><li class="list-group-item bg-transparent"><i class="bi bi-person text-brand me-2"></i>Gulle, Kevin Ian B.</li><li class="list-group-item bg-transparent"><i class="bi bi-person text-brand me-2"></i>Oras, Nathaniel</li><li class="list-group-item bg-transparent"><i class="bi bi-person text-brand me-2"></i>Sevilla, Errol P.</li></ul></div>
-    <div class="col-md-7"><form class="panel">
-      <div class="mb-3"><label class="form-label" for="cname">Name</label><input type="text" id="cname" class="form-control" placeholder="Your name"></div>
-      <div class="mb-3"><label class="form-label" for="cemail">Email</label><input type="email" id="cemail" class="form-control" placeholder="name@example.com"></div>
-      <div class="mb-3"><label class="form-label" for="cmsg">Message</label><textarea id="cmsg" class="form-control" rows="4"></textarea></div>
-      <button type="button" class="btn btn-brand w-100">Send message</button>
-      <p class="small text-muted mt-3 mb-0">This form does not send anything yet. Connect it to a form service or backend to receive messages.</p>
-    </form></div></div></div></section>
-  <footer class="bg-dark text-light py-4 mt-5">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+
+  <!-- Page Header -->
+  <header class="page-header py-5">
+    <div class="container">
+      <div class="section-label">Get in Touch</div>
+      <h1 class="fw-bold display-5">Contact the Team</h1>
+      <p class="lead mb-0" style="color:#aaa; max-width:650px;">
+        Questions about the study? Send us a message.
+        We'd be happy to hear from you.
+      </p>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="researchers-section py-5">
+    <div class="container">
+      <div class="row g-5">
+
+        <!-- Researchers -->
+        <div class="col-md-5">
+          <div class="section-label">The People Behind the Project</div>
+          <h2 class="fw-bold mb-4">Researchers</h2>
+
+          <ul class="list-group list-group-flush researcher-list">
+            <li class="list-group-item">
+              <i class="bi bi-person-circle me-2"></i>
+              Congrejilla, Mark Jhon
+            </li>
+
+            <li class="list-group-item">
+              <i class="bi bi-person-circle me-2"></i>
+              Gulle, Kevin Ian B.
+            </li>
+
+            <li class="list-group-item">
+              <i class="bi bi-person-circle me-2"></i>
+              Oras, Nathaniel
+            </li>
+
+            <li class="list-group-item">
+              <i class="bi bi-person-circle me-2"></i>
+              Sevilla, Errol P.
+            </li>
+          </ul>
+
+          <div class="mt-4 p-3 rounded"
+            style="background:#151515; border:1px solid #303030;">
+            <i class="bi bi-shield-check accent fs-4"></i>
+            <h5 class="text-white mt-2">LAN Sentinel</h5>
+            <p class="text-muted small mb-0">
+              An AI-based network intrusion detection system
+              concept for safer local area networks.
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-md-7">
+          <form class="contact-panel" id="contactForm">
+
+            <h2 class="fw-bold mb-2">Send Us a Message</h2>
+            <p class="text-muted mb-4">
+              Fill in the details below.
+            </p>
+
+            <div class="mb-3">
+              <label class="form-label" for="cname">Name</label>
+              <input
+                type="text"
+                id="cname"
+                class="form-control"
+                placeholder="Your name"
+                required
+              >
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="cemail">Email</label>
+              <input
+                type="email"
+                id="cemail"
+                class="form-control"
+                placeholder="name@example.com"
+                required
+              >
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="cmsg">Message</label>
+              <textarea
+                id="cmsg"
+                class="form-control"
+                rows="5"
+                placeholder="Write your message here..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-send w-100">
+              <i class="bi bi-send me-2"></i> Send Message
+            </button><p class="small text-muted mt-3 mb-0">
+              <i class="bi bi-info-circle me-1"></i>
+              This form is currently a front-end demo. It does not
+              send or store messages yet. Connect it to a form
+              service or backend to receive submissions.
+            </p>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-light py-4 mt-5">
+    <div class="container d-flex flex-column flex-md-row
+      justify-content-between align-items-center gap-2">
+
       <span>&copy; 2026 LAN Sentinel. A student concept paper project.</span>
-      <span class="small"><a class="text-light" href="../pages/about.html">About</a> &nbsp; <a class="text-light" href="../pages/literature.html">Literature</a> &nbsp; <a class="text-light" href="../pages/contact.html">Contact</a></span>
+
+      <span class="small">
+        <a href="about.html">About</a> &nbsp;
+        <a href="literature.html">Literature</a> &nbsp;
+        <a href="contact.html">Contact</a>
+      </span>
+
     </div>
   </footer>
+
   <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Contact form demo
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      alert("Thank you for your message! This is only a demo, so your message has not been sent.");
+
+      this.reset();
+    });
+  </script>
+
 </body>
 </html>
