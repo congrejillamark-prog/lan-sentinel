@@ -1,0 +1,17 @@
+/* Loaded AFTER style.css so these brand colors win. Edit the :root values to recolor the site. */
+:root{--brand:#0e7c86;--brand-dark:#0a5d65;--ink:#12232e;--signal:#f2a900;--paper:#f4f8f9;--line:#d5e0e4}
+body{background:var(--paper);color:var(--ink)}
+h1,h2,h3{letter-spacing:-.01em}
+.btn-brand{background:var(--brand);border-color:var(--brand);color:#fff}
+.btn-brand:hover,.btn-brand:focus{background:var(--brand-dark);border-color:var(--brand-dark);color:#fff}
+.text-brand{color:var(--brand)!important}
+.bg-brand{background:var(--brand)!important}
+.hero{background:var(--ink)!important;background-image:none!important;padding:5rem 0}
+.hero::before{display:none!important}
+.hero p{color:#c3d4da}
+.auth-image{background:linear-gradient(160deg,var(--ink),var(--brand-dark))!important}
+.sidebar{background:var(--ink)!important}
+.panel{background:#fff;border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:.35rem;padding:1.25rem}
+.panel.warn{border-left-color:var(--signal)}
+.lead-narrow{max-width:62ch}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--signal);outline-offset:2px}
