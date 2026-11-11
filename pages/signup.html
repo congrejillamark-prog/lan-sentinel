@@ -189,8 +189,7 @@
                      placeholder="Juan"
                      required>
             </div>
-
-            <div class="col-sm-6">
+<div class="col-sm-6">
               <label for="last" class="form-label">Last name</label>
               <input type="text"
                      class="form-control"
@@ -222,4 +221,164 @@
             <label for="course" class="form-label">Role</label>
 
             <select class="form-select" id="course" name="role" required>
-              <option value="" selected disabled>Choose your role</op
+              <option value="" selected disabled>Choose your role</option>
+              <option>Network administrator</option>
+              <option>IT staff</option>
+              <option>Student researcher</option>
+            </select>
+
+          </div>
+
+          <!-- Password -->
+          <div class="row g-3 mb-3">
+
+            <div class="col-sm-6">
+
+              <label for="password" class="form-label">Password</label>
+
+              <div class="password-wrap">
+
+                <input type="password"
+                       class="form-control"
+                       id="password"
+                       name="password"
+                       placeholder="Password"
+                       minlength="8"
+                       required>
+
+                <button type="button"
+                        class="password-toggle"
+                        onclick="togglePassword('password', this)"
+                        aria-label="Show password">
+                  <i class="bi bi-eye"></i>
+                </button>
+
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+
+              <label for="confirm" class="form-label">Confirm password</label>
+
+              <div class="password-wrap">
+
+                <input type="password"
+                       class="form-control"
+                       id="confirm"
+                       name="confirm"
+                       placeholder="Confirm password"
+                       minlength="8"
+                       required>
+
+                <button type="button"
+                        class="password-toggle"
+                        onclick="togglePassword('confirm', this)"
+                        aria-label="Show confirm password">
+                  <i class="bi bi-eye"></i>
+                </button>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Terms -->
+          <div class="form-check mb-4">
+
+            <input class="form-check-input"
+                   type="checkbox"
+                   id="terms"
+                   required>
+
+            <label class="form-check-label text-light" for="terms">
+              I agree to the
+              <a href="#" class="auth-link">Terms &amp; Conditions</a>
+            </label>
+
+          </div>
+
+          <!-- Submit -->
+          <button type="submit"
+                  class="btn btn-signup w-100 py-2 fw-semibold">
+            <i class="bi bi-person-plus me-2"></i>
+            Create Account
+          </button>
+
+        </form>
+
+        <p class="text-center mt-4 login-text">
+          Already have an account?
+          <a href="login.html" class="auth-link fw-semibold">Login</a>
+        </p>
+
+        <p class="text-center mt-4 small text-muted">
+          © 2026 LAN Sentinel. All rights reserved.
+        </p>
+
+      </div>
+    </div>
+
+    <!-- Image Section -->
+    <div class="col-lg-6 auth-image signup d-flex align-items-end p-5 order-1 order-lg-2">
+
+      <div class="image-content text-white">
+
+        <div class="image-line"></div>
+
+        <span class="text-uppercase small fw-bold"
+              style="letter-spacing:4px;color:#ff4444">
+          Network Protection
+        </span>
+<h2 class="fw-bold mt-3">
+          Protect your LAN.
+          Secure your future.
+        </h2>
+
+        <p class="text-light mt-3">
+          Create your administrator account and explore a smarter
+          approach to monitoring network security.
+        </p>
+
+        <div class="mt-4">
+          <i class="bi bi-shield-lock fs-2 text-danger me-2"></i>
+          <i class="bi bi-hdd-network fs-2 text-danger me-2"></i>
+          <i class="bi bi-activity fs-2 text-danger"></i>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function togglePassword(id, button) {
+    const field = document.getElementById(id);
+    const icon = button.querySelector("i");
+
+    if (field.type === "password") {
+      field.type = "text";
+      icon.classList.replace("bi-eye", "bi-eye-slash");
+      button.setAttribute("aria-label", "Hide password");
+    } else {
+      field.type = "password";
+      icon.classList.replace("bi-eye-slash", "bi-eye");
+      button.setAttribute("aria-label", "Show password");
+    }
+  }
+
+  document.querySelector("form").addEventListener("submit", function(e) {
+    const password = document.getElementById("password").value;
+    const confirm = document.getElementById("confirm").value;
+
+    if (password !== confirm) {
+      e.preventDefault();
+      alert("Passwords do not match!");
+    }
+  });
+</script>
+
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
