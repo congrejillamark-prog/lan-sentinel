@@ -1,12 +1,499 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LAN Sentinel | Literature</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAN Sentinel | Related Literature</title>
 
-  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
-  <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../assets/css/bootstrap-icons.min.css" rel="stylesheet">
-  <link href="../assets/css/style.css" rel="stylesheet">
-  <link href="../assets/css/project.css"
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/project.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #080808;
+            color: #f5f5f5;
+        }
+
+        .navbar {
+            background: #101010 !important;
+            border-bottom: 1px solid #303030;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: #f5f5f5 !important;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #e50914 !important;
+        }
+
+        .page-header {
+            padding: 100px 0 60px;
+            background: linear-gradient(135deg, #080808, #1a0809);
+            border-bottom: 1px solid #303030;
+        }
+
+        .page-header h1 {
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .page-header h1 span {
+            color: #e50914;
+        }
+
+        .page-header p {
+            color: #aaa;
+            max-width: 750px;
+        }
+
+        .literature-section {
+            padding: 55px 0;
+        }
+
+        .section-title {
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .section-title span {
+            color: #e50914;
+        }
+
+        .literature-card {
+            background: #151515;
+            border: 1px solid #303030;
+            border-left: 4px solid #e50914;
+            border-radius: 10px;
+            padding: 25px;
+            height: 100%;
+            transition: 0.3s ease;
+        }
+
+        .literature-card:hover {
+            transform: translateY(-5px);
+            border-color: #e50914;
+        }
+
+        .literature-card h5 {
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .literature-card p {
+            color: #b5b5b5;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        .author {
+            color: #ff3030;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .content-box {
+            background: #151515;
+            border: 1px solid #303030;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+
+        .content-box p {
+            color: #b5b5b5;
+            line-height: 1.8;
+        }
+
+        .research-gap {
+            border-left: 4px solid #e50914;
+            background: #1a1010;
+        }
+
+        .reference-list li {
+            color: #b5b5b5;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        footer {
+            background: #101010;
+            border-top: 1px solid #303030;
+            padding: 25px 0;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 75px 0 45px;
+            }
+
+            .content-box {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">
+            <span style="color:#e50914;">LAN</span> SENTINEL
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+<div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="literature.html">Literature</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+    <div class="container">
+        <p class="text-uppercase fw-bold mb-2" style="color:#e50914;">
+            Research Foundation
+        </p>
+
+        <h1>Review of <span>Related Literature</span></h1>
+
+        <p class="mt-3">
+            This section presents foreign and local studies related to
+            network security, intrusion detection, traffic anomaly analysis,
+            and artificial intelligence.
+        </p>
+    </div>
+</header>
+
+<!-- FOREIGN LITERATURE -->
+<section class="literature-section">
+    <div class="container">
+        <h2 class="section-title">
+            Foreign <span>Literature</span>
+        </h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-6">
+                <div class="literature-card">
+                    <div class="author">Chandola, Banerjee, and Kumar (2009)</div>
+                    <h5>Anomaly Detection: A Survey</h5>
+                    <p>
+                        This study provides an overview of anomaly detection
+                        techniques and explains how unusual patterns can be
+                        identified from normal data. It supports the use of
+                        anomaly detection in recognizing unusual network
+                        behavior.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="literature-card">
+                    <div class="author">Ring et al. (2019)</div>
+                    <h5>Network-Based Intrusion Detection</h5>
+                    <p>
+                        This research discusses network-based intrusion
+                        detection and the datasets used to evaluate security
+                        systems. It provides background for developing and
+                        testing intrusion detection methods using network
+                        traffic data.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="literature-card">
+                    <div class="author">Kolias et al. (2016)</div>
+                    <h5>Distributed Denial-of-Service Attacks</h5>
+                    <p>
+                        This study discusses distributed denial-of-service
+                        attacks and their effects on network availability.
+                        It is relevant to identifying traffic flooding and
+                        other suspicious activities that may affect a
+                        local network.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="literature-card">
+                    <div class="author">Sharafaldin et al. (2018)</div>
+                    <h5>CICIDS2017 Dataset</h5>
+<p>
+                        This research introduces the CICIDS2017 dataset,
+                        which contains normal network traffic and different
+                        types of attacks. It provides a useful reference
+                        for evaluating intrusion detection systems.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="literature-card">
+                    <div class="author">Ahmad et al. (2021)</div>
+                    <h5>Machine Learning for Intrusion Detection</h5>
+                    <p>
+                        This study is included as related work on the use
+                        of machine learning in intrusion detection. It
+                        supports the research direction of using intelligent
+                        techniques to recognize suspicious network activity.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="literature-card">
+                    <div class="author">Liu et al. (2008)</div>
+                    <h5>Outlier Detection</h5>
+                    <p>
+                        This research discusses methods for identifying
+                        unusual data patterns. Its concepts are relevant
+                        to detecting network activities that differ from
+                        established normal behavior.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="literature-card">
+                    <div class="author">Mirsky et al. (2018)</div>
+                    <h5>Kitsune: An Ensemble of Autoencoders</h5>
+                    <p>
+                        This study presents Kitsune, a network intrusion
+                        detection system that uses an ensemble of
+                        autoencoders to identify unusual network traffic.
+                        It demonstrates how machine learning can be applied
+                        to network anomaly detection.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="literature-card">
+                    <div class="author">Doriguzzi-Corin et al. (2020)</div>
+                    <h5>LUCID: A Practical Lightweight Deep Learning Solution</h5>
+                    <p>
+                        This research presents a lightweight deep learning
+                        approach for network intrusion detection. It is
+                        relevant to developing detection methods that
+                        consider processing efficiency and practical
+                        network environments.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- LOCAL LITERATURE -->
+<section class="literature-section" style="background:#101010;">
+    <div class="container">
+        <h2 class="section-title">
+            Local <span>Literature</span>
+        </h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-6">
+                <div class="literature-card">
+                    <div class="author">Natonton (2018)</div>
+                    <h5>Local Network Security Research</h5>
+                    <p>
+                        This local study is included in the research as
+                        related literature concerning network security
+                        and the challenges of protecting computer networks.
+                        It provides a local perspective for understanding
+                        the need for improved network protection.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+<div class="literature-card">
+                    <div class="author">De Ramos and Esponilla (2022)</div>
+                    <h5>Network Security and Intrusion Detection</h5>
+                    <p>
+                        This study contributes to the local research
+                        background on network security. It is relevant
+                        to understanding the importance of monitoring
+                        network activities and identifying possible
+                        security threats.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="literature-card">
+                    <div class="author">Aquino and Noroña (2021)</div>
+                    <h5>Network Monitoring and Security</h5>
+                    <p>
+                        This local reference supports the discussion
+                        of network monitoring and the need to improve
+                        security practices in computer network environments.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="literature-card">
+                    <div class="author">Miranda, Tayag, and Canlas (2025)</div>
+                    <h5>Related Research on Network Security</h5>
+                    <p>
+                        This recent local reference contributes to the
+                        discussion of network security and the use of
+                        technology to address possible threats in
+                        computer networks.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SYNTHESIS -->
+<section class="literature-section">
+    <div class="container">
+        <h2 class="section-title">
+            Synthesis of <span>Related Literature</span>
+        </h2>
+
+        <div class="content-box">
+            <p>
+                The reviewed foreign and local literature shows that
+                network security is important in protecting computer
+                networks from unauthorized access and malicious activities.
+                Previous studies explain how anomaly detection, machine
+                learning, and network traffic analysis can help identify
+                suspicious behavior. Research involving datasets such as
+                CICIDS2017 and systems such as Kitsune and LUCID also
+                demonstrates the use of intelligent techniques in
+                detecting network attacks.
+            </p>
+
+            <p>
+                These studies provide a foundation for the development
+                of LAN Sentinel. By using traffic anomaly analysis, the
+                proposed system aims to recognize unusual network behavior
+                and present security alerts through an administrator
+                dashboard.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- RESEARCH GAP -->
+<section class="literature-section" style="background:#101010;">
+    <div class="container">
+        <h2 class="section-title">
+            Identified <span>Research Gap</span>
+        </h2>
+
+        <div class="content-box research-gap">
+            <p>
+                Although previous studies have explored anomaly detection,
+                machine learning, and network intrusion detection, there
+                remains a need for a practical and accessible solution
+                focused on small-to-medium Local Area Networks, particularly
+                in the Philippine setting.
+            </p>
+
+            <p>
+                Existing security tools may depend on predefined rules
+                or previously identified attack patterns. This creates
+                a need for an approach that can establish normal network
+                behavior and identify unusual activities through traffic
+                anomaly analysis.
+            </p>
+<p>
+                This research addresses the identified gap by proposing
+                an AI-based Network Intrusion Detection System that
+                analyzes network traffic, detects suspicious activities,
+                and presents alerts and monitoring information through
+                an administrator dashboard.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- REFERENCES -->
+<section class="literature-section">
+    <div class="container">
+        <h2 class="section-title">
+            References
+        </h2>
+
+        <div class="content-box">
+            <ul class="reference-list">
+                <li>Ahmad et al. (2021).</li>
+                <li>Aquino and Noroña (2021).</li>
+                <li>Chandola, V., Banerjee, A., and Kumar, V. (2009).</li>
+                <li>De Ramos and Esponilla (2022).</li>
+                <li>Doriguzzi-Corin et al. (2020).</li>
+                <li>Kolias et al. (2016).</li>
+                <li>Liu et al. (2008).</li>
+                <li>Miranda, Tayag, and Canlas (2025).</li>
+                <li>Mirsky et al. (2018).</li>
+                <li>Natonton (2018).</li>
+                <li>Ring et al. (2019).</li>
+                <li>Sharafaldin et al. (2018).</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container text-center">
+        <p class="mb-1">
+            <strong><span style="color:#e50914;">LAN</span> SENTINEL</strong>
+        </p>
+        <small>
+            AI-Based Network Intrusion Detection System for Local Area Networks
+        </small>
+        <p class="mt-3 mb-0">
+            © 2026 LAN Sentinel. All Rights Reserved.
+        </p>
+    </div>
+</footer>
+
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
