@@ -3,75 +3,159 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LAN Sentinel | Home</title>
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="LAN Sentinel is a proposed AI-based network intrusion detection system for small and medium local area networks using traffic anomaly analysis.">
+  <title>LAN Sentinel | Network Intelligence</title>
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/css/bootstrap-icons.min.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/project.css" rel="stylesheet">
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+<body class="ls-home">
+  <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-shield-check text-brand"></i> LAN Sentinel</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <a class="navbar-brand fw-bold text-white" href="index.html"><i class="bi bi-shield-shaded text-brand me-2"></i>LAN <span class="text-brand">Sentinel</span></a>
+      <button class="navbar-toggler border-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2"><li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="pages/about.html">About</a></li><li class="nav-item"><a class="nav-link" href="pages/literature.html">Literature</a></li><li class="nav-item"><a class="nav-link" href="pages/dashboard.html">Dashboard</a></li><li class="nav-item"><a class="nav-link" href="pages/contact.html">Contact</a></li>
-          <li class="nav-item"><a class="btn btn-outline-secondary btn-sm" href="pages/login.html">Login</a></li>
-          <li class="nav-item"><a class="btn btn-brand btn-sm" href="pages/signup.html">Sign Up</a></li>
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#study">The Study</a></li>
+          <li class="nav-item"><a class="nav-link" href="#route">Route</a></li>
+          <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-outline-light btn-sm px-3" href="pages/login.html">Login</a></li>
+          <li class="nav-item"><a class="btn btn-brand btn-sm px-3" href="pages/signup.html">Sign Up</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <header class="hero"><div class="container"><div class="row align-items-center g-5">
-    <div class="col-lg-7 text-center text-lg-start">
-      <h1 class="display-4 fw-bold">Know when something on your network is not normal.</h1>
-      <p class="lead my-4">A lightweight AI intrusion detection system that learns how a Wi-Fi local area network normally behaves, then alerts the administrator when a device or traffic pattern does not fit.</p>
-      <a href="pages/dashboard.html" class="btn btn-brand btn-lg me-2">View sample dashboard</a>
-      <a href="pages/about.html" class="btn btn-outline-light btn-lg">Read the concept</a>
-    </div>
-    <div class="col-lg-5"><img src="assets/images/traffic-anomaly-dark.svg" class="img-fluid" alt="Chart of network traffic inside a normal range with one spike flagged as unusual"></div>
-  </div></div></header>
+  <main>
+    <header class="hero hero-home ls-hero">
+      <div class="ls-hero-grid"></div>
+      <div class="container position-relative">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7 text-center text-lg-start">
+            <div class="ls-eyebrow"><span class="ls-pulse"></span> AI-BASED NETWORK INTRUSION DETECTION</div>
+            <h1>See the unusual.<br><span class="ls-gradient-text">Understand your network.</span></h1>
+            <p class="lead my-4">A proposed lightweight Network Intrusion Detection System that studies normal traffic behavior in a Wi-Fi Local Area Network and flags unusual activity and potentially unauthorized devices for administrator review.</p>
+            <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+              <a href="pages/login.html?next=dashboard" class="btn btn-brand btn-lg">Explore Dashboard <i class="bi bi-arrow-up-right ms-2"></i></a>
+              <a href="#study" class="btn btn-outline-light btn-lg">Explore the Study</a>
+            </div>
+            <div class="ls-hero-note mt-4"><i class="bi bi-info-circle me-2"></i>Research prototype · Designed for small to medium LAN environments</div>
+          </div>
+          <div class="col-lg-5">
+            <div class="ls-visual-shell">
+              <div class="ls-visual-top"><span><i class="bi bi-shield-check me-2"></i>TRAFFIC ANOMALY PROFILE</span><span class="ls-live-dot">CONCEPT</span></div>
+              <img src="assets/images/traffic-anomaly-dark.svg" class="img-fluid" alt="Illustration of a normal network traffic baseline with an unusual traffic spike highlighted">
+              <div class="ls-visual-foot"><span><i class="bi bi-activity me-2"></i>Behavior-based monitoring</span><span>LAN / Wi-Fi</span></div>
+            </div>
+            <div class="ls-float-chip chip-one"><i class="bi bi-diagram-3"></i><span>Device activity</span></div>
+            <div class="ls-float-chip chip-two"><i class="bi bi-graph-up-arrow"></i><span>Traffic patterns</span></div>
+          </div>
+        </div>
+      </div>
+    </header>
 
-  <section id="features" class="py-5"><div class="container py-4">
-    <div class="text-center mb-5"><h2 class="fw-bold">How it works</h2><p class="text-muted">Three steps from raw traffic to a useful alert.</p></div>
-    <div class="row g-4">
-      <div class="col-md-4"><div class="card h-100 border-0 shadow-sm card-hover text-center p-4"><span class="feature-icon mx-auto mb-3"><i class="bi bi-hdd-network"></i></span><h5>Capture</h5><p class="text-muted mb-0">Passively collects LAN traffic and extracts packet rates, packet sizes, protocol mix and MAC/IP activity.</p></div></div>
-      <div class="col-md-4"><div class="card h-100 border-0 shadow-sm card-hover text-center p-4"><span class="feature-icon mx-auto mb-3"><i class="bi bi-cpu"></i></span><h5>Learn</h5><p class="text-muted mb-0">Builds a baseline of normal traffic and known device behavior with machine learning.</p></div></div>
-      <div class="col-md-4"><div class="card h-100 border-0 shadow-sm card-hover text-center p-4"><span class="feature-icon mx-auto mb-3"><i class="bi bi-bell"></i></span><h5>Alert</h5><p class="text-muted mb-0">Flags anomalies and unauthorized devices and shows them to the administrator on a dashboard.</p></div></div>
-    </div></div></section>
+    <section class="ls-proof-strip" aria-label="Study focus">
+      <div class="container"><div class="row g-3 text-center">
+        <div class="col-6 col-lg-3"><div class="ls-proof-item"><i class="bi bi-router"></i><span>Single LAN focus</span></div></div>
+        <div class="col-6 col-lg-3"><div class="ls-proof-item"><i class="bi bi-bezier2"></i><span>Traffic anomaly analysis</span></div></div>
+        <div class="col-6 col-lg-3"><div class="ls-proof-item"><i class="bi bi-cpu"></i><span>Machine-learning baseline</span></div></div>
+        <div class="col-6 col-lg-3"><div class="ls-proof-item"><i class="bi bi-bell"></i><span>Administrator alerts</span></div></div>
+      </div></div>
+    </section>
 
-  <section class="py-5 bg-white"><div class="container py-4"><div class="row align-items-center g-5">
-    <div class="col-lg-6"><img src="assets/images/traffic-anomaly.svg" class="img-fluid" alt="Traffic chart with one anomaly highlighted"></div>
-    <div class="col-lg-6">
-      <h2 class="fw-bold">Why a baseline matters</h2>
-      <p class="text-muted">Firewalls apply fixed rules and signature-based tools miss new attacks. Small networks rarely have a tool that compares current activity with what is normal for that specific network.</p>
-      <ul class="list-unstyled">
-        <li class="mb-2"><i class="bi bi-check-circle-fill text-brand me-2"></i>Profiles normal behavior of one specific LAN</li>
-        <li class="mb-2"><i class="bi bi-check-circle-fill text-brand me-2"></i>Flags unauthorized devices and abnormal traffic</li>
-        <li class="mb-2"><i class="bi bi-check-circle-fill text-brand me-2"></i>Works for administrators without a security team</li>
-      </ul>
-    </div></div></div></section>
+    <section id="study" class="ls-section ls-study-section">
+      <div class="container">
+        <div class="row align-items-end g-4 mb-5">
+          <div class="col-lg-7"><div class="ls-kicker">THE STUDY</div><h2 class="ls-section-title">A smarter way to understand<br><span>what is normal.</span></h2></div>
+          <div class="col-lg-5"><p class="ls-section-intro">The study addresses a practical problem: small and medium-sized LANs may not have dedicated security personnel or affordable tools that continuously compare network activity with expected behavior.</p></div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-7"><div class="ls-problem-card h-100"><div class="ls-card-icon"><i class="bi bi-shield-exclamation"></i></div><div class="ls-kicker">RESEARCH PROBLEM</div><h3>Unauthorized devices and abnormal traffic can go unnoticed.</h3><p>Wi-Fi passwords, firewalls, and MAC address filtering mainly focus on prevention or predefined rules. They do not always analyze changing network behavior to identify unusual activity.</p><div class="ls-problem-tags"><span>Unknown devices</span><span>Unusual traffic</span><span>Limited monitoring resources</span></div></div></div>
+          <div class="col-lg-5"><div class="ls-objective-card h-100"><div class="ls-kicker">GENERAL OBJECTIVE</div><h3>Develop an AI-based NIDS for local area networks.</h3><p>Use traffic anomaly analysis to detect unauthorized devices and abnormal network activity.</p><a href="pages/about.html" class="ls-text-link">Read the study background <i class="bi bi-arrow-right"></i></a></div></div>
+        </div>
+        <div class="ls-objectives mt-4">
+          <div class="ls-objective-heading"><div><div class="ls-kicker">SPECIFIC OBJECTIVES</div><h3>What LAN Sentinel aims to do</h3></div><a href="pages/about.html" class="btn btn-outline-light btn-sm">Full study details <i class="bi bi-arrow-up-right ms-1"></i></a></div>
+          <div class="row g-3 mt-1">
+            <div class="col-md-4"><div class="ls-objective-step"><span>01</span><h4>Capture & prepare traffic</h4><p>Extract packet rates, packet sizes, protocol mix, and MAC/IP activity from normal and simulated attack traffic.</p></div></div>
+            <div class="col-md-4"><div class="ls-objective-step"><span>02</span><h4>Learn normal behavior</h4><p>Build a baseline profile of normal traffic and known device behavior, then flag deviations for review.</p></div></div>
+            <div class="col-md-4"><div class="ls-objective-step"><span>03</span><h4>Test system performance</h4><p>Evaluate using simulated attacks and public datasets with accuracy, precision, recall, F1-score, false-positive rate, and processing overhead.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section id="attacks" class="py-5"><div class="container py-4">
-    <div class="text-center mb-5"><h2 class="fw-bold">Tested against four simulated attacks</h2></div>
-    <div class="row g-4"><div class="col-md-6 col-lg-3"><div class="card h-100 border-0 shadow-sm card-hover p-4"><span class="feature-icon mb-3"><i class="bi bi-search"></i></span><h5>Port scanning</h5><p class="text-muted mb-0">A host probes other devices for open ports.</p></div></div><div class="col-md-6 col-lg-3"><div class="card h-100 border-0 shadow-sm card-hover p-4"><span class="feature-icon mb-3"><i class="bi bi-arrow-left-right"></i></span><h5>ARP spoofing</h5><p class="text-muted mb-0">A device forges ARP replies to intercept traffic.</p></div></div><div class="col-md-6 col-lg-3"><div class="card h-100 border-0 shadow-sm card-hover p-4"><span class="feature-icon mb-3"><i class="bi bi-lightning-charge"></i></span><h5>DoS flooding</h5><p class="text-muted mb-0">Traffic is flooded to disrupt a service.</p></div></div><div class="col-md-6 col-lg-3"><div class="card h-100 border-0 shadow-sm card-hover p-4"><span class="feature-icon mb-3"><i class="bi bi-phone"></i></span><h5>Unauthorized device</h5><p class="text-muted mb-0">An unknown device joins the Wi-Fi network.</p></div></div></div>
-    <div class="text-center mt-5"><p class="text-muted mb-2">Results are measured by</p><span class="badge text-bg-light border me-1 mb-1 fs-6 fw-normal">Accuracy</span><span class="badge text-bg-light border me-1 mb-1 fs-6 fw-normal">Precision</span><span class="badge text-bg-light border me-1 mb-1 fs-6 fw-normal">Recall</span><span class="badge text-bg-light border me-1 mb-1 fs-6 fw-normal">F1-score</span><span class="badge text-bg-light border me-1 mb-1 fs-6 fw-normal">False-positive rate</span><span class="badge text-bg-light border me-1 mb-1 fs-6 fw-normal">Processing overhead</span></div>
-  </div></section>
+    <section id="features" class="ls-section ls-features-section">
+      <div class="container">
+        <div class="text-center mb-5"><div class="ls-kicker">SYSTEM CAPABILITIES</div><h2 class="ls-section-title">From network activity to <span>useful insight.</span></h2><p class="ls-section-intro mx-auto">The proposed system combines device visibility, traffic feature extraction, anomaly analysis, and an administrator-facing dashboard.</p></div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3"><article class="ls-feature-card h-100"><div class="ls-feature-icon"><i class="bi bi-hdd-network"></i></div><span class="ls-feature-no">CAPABILITY 01</span><h3>Device visibility</h3><p>Observe device activity and MAC/IP information to help identify devices that are not recognized on the LAN.</p></article></div>
+          <div class="col-md-6 col-lg-3"><article class="ls-feature-card h-100"><div class="ls-feature-icon"><i class="bi bi-bar-chart-line"></i></div><span class="ls-feature-no">CAPABILITY 02</span><h3>Traffic analysis</h3><p>Prepare flow-level features such as packet rates, packet sizes, and protocol mix for behavior analysis.</p></article></div>
+          <div class="col-md-6 col-lg-3"><article class="ls-feature-card h-100"><div class="ls-feature-icon"><i class="bi bi-cpu"></i></div><span class="ls-feature-no">CAPABILITY 03</span><h3>Learned baseline</h3><p>Build a profile of normal traffic and known device behavior for the specific network being studied.</p></article></div>
+          <div class="col-md-6 col-lg-3"><article class="ls-feature-card h-100"><div class="ls-feature-icon"><i class="bi bi-bell"></i></div><span class="ls-feature-no">CAPABILITY 04</span><h3>Alerts & reports</h3><p>Present anomalies, potentially unauthorized devices, logs, and basic reports to the network administrator.</p></article></div>
+        </div>
+      </div>
+    </section>
 
-  <section class="py-5 bg-white text-center"><div class="container py-3">
-    <h2 class="fw-bold">Want the full study?</h2>
-    <p class="text-muted">Objectives, scope, related literature and references are all here.</p>
-    <a href="pages/about.html" class="btn btn-brand me-2">About the study</a><a href="pages/literature.html" class="btn btn-outline-secondary">Related literature</a>
-  </div></section>
+    <section id="route" class="ls-section ls-route-section">
+      <div class="container">
+        <div class="row align-items-end g-4 mb-5"><div class="col-lg-7"><div class="ls-kicker">PROPOSED SYSTEM ROUTE</div><h2 class="ls-section-title">How the analysis <span>flows.</span></h2></div><div class="col-lg-5"><p class="ls-section-intro">LAN Sentinel is designed to passively observe one local network, prepare traffic and device features, learn expected behavior, and alert an administrator to deviations.</p></div></div>
+        <div class="ls-route-track">
+          <div class="ls-route-step"><div class="ls-route-icon"><i class="bi bi-broadcast-pin"></i></div><span>STEP 01</span><h3>Capture</h3><p>Passively capture LAN traffic through a supported monitoring host or mirrored port.</p></div>
+          <div class="ls-route-step"><div class="ls-route-icon"><i class="bi bi-funnel"></i></div><span>STEP 02</span><h3>Extract</h3><p>Prepare packet rates, packet sizes, protocol mix, and MAC/IP activity.</p></div>
+          <div class="ls-route-step"><div class="ls-route-icon"><i class="bi bi-cpu"></i></div><span>STEP 03</span><h3>Analyze</h3><p>Compare current activity with a learned baseline of normal network behavior.</p></div>
+          <div class="ls-route-step"><div class="ls-route-icon"><i class="bi bi-shield-check"></i></div><span>STEP 04</span><h3>Alert</h3><p>Show anomalies and potentially unauthorized devices for administrator review.</p></div>
+        </div>
+        <div class="ls-route-note"><i class="bi bi-info-circle me-2"></i>The system is designed to detect and alert only. Automatic blocking and encrypted-payload inspection are outside the study's scope.</div>
+      </div>
+    </section>
 
-  <footer class="bg-dark text-light py-4 mt-5">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
-      <span>&copy; 2026 LAN Sentinel. A student concept paper project.</span>
-      <span class="small"><a class="text-light" href="pages/about.html">About</a> &nbsp; <a class="text-light" href="pages/literature.html">Literature</a> &nbsp; <a class="text-light" href="pages/contact.html">Contact</a></span>
-    </div>
-  </footer>
+    <section class="ls-section ls-test-section">
+      <div class="container">
+        <div class="text-center mb-5"><div class="ls-kicker">CONTROLLED EVALUATION</div><h2 class="ls-section-title">Threat scenarios in the <span>study scope.</span></h2><p class="ls-section-intro mx-auto">These are the simulated attack scenarios identified in the concept paper. They are test cases, not claims of completed detection results.</p></div>
+        <div class="row g-3">
+          <div class="col-sm-6 col-lg-3"><div class="ls-threat-card"><i class="bi bi-search"></i><h3>Port scanning</h3><p>A host probes devices for open ports.</p><span>SIMULATED TEST CASE</span></div></div>
+          <div class="col-sm-6 col-lg-3"><div class="ls-threat-card"><i class="bi bi-arrow-left-right"></i><h3>ARP spoofing</h3><p>Forged ARP information may mislead devices about IP-to-MAC mappings.</p><span>SIMULATED TEST CASE</span></div></div>
+          <div class="col-sm-6 col-lg-3"><div class="ls-threat-card"><i class="bi bi-lightning-charge"></i><h3>Traffic flooding</h3><p>Abnormally high traffic may disrupt network availability.</p><span>SIMULATED TEST CASE</span></div></div>
+          <div class="col-sm-6 col-lg-3"><div class="ls-threat-card"><i class="bi bi-person-exclamation"></i><h3>Unauthorized device</h3><p>An unrecognized device appears in the monitored LAN.</p><span>SIMULATED TEST CASE</span></div></div>
+        </div>
+        <div class="ls-evaluation"><div><div class="ls-kicker">EVALUATION METRICS</div><h3>Measure performance, not assumptions.</h3><p>System testing will examine detection quality and processing cost.</p></div><div class="ls-metric-list"><span>Accuracy</span><span>Precision</span><span>Recall</span><span>F1-score</span><span>False-positive rate</span><span>Processing overhead</span></div></div>
+      </div>
+    </section>
+
+    <section id="team" class="ls-section ls-team-section">
+      <div class="container">
+        <div class="text-center mb-5"><div class="ls-kicker">THE RESEARCHERS</div><h2 class="ls-section-title">Meet the <span>project team.</span></h2><p class="ls-section-intro mx-auto">LAN Sentinel is developed as an academic research project.</p></div>
+        <div class="row g-3 justify-content-center">
+          <div class="col-6 col-lg-3"><div class="ls-team-card"><div class="ls-avatar">MC</div><h3>Mark Jhon Congrejilla</h3><span>Researcher</span></div></div>
+          <div class="col-6 col-lg-3"><div class="ls-team-card"><div class="ls-avatar">KG</div><h3>Kevin Ian B. Gulle</h3><span>Researcher</span></div></div>
+          <div class="col-6 col-lg-3"><div class="ls-team-card"><div class="ls-avatar">NO</div><h3>Nathaniel Oras</h3><span>Researcher</span></div></div>
+          <div class="col-6 col-lg-3"><div class="ls-team-card"><div class="ls-avatar">ES</div><h3>Errol P. Sevilla</h3><span>Researcher</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ls-cta-section"><div class="container"><div class="ls-cta-box"><div><div class="ls-kicker">EXPLORE LAN SENTINEL</div><h2>See the system interface.</h2><p>Open the dashboard to explore the analysis workspace. Sign in is required before viewing dashboard pages.</p></div><a href="pages/login.html?next=dashboard" class="btn btn-brand btn-lg">Go to Login <i class="bi bi-arrow-right ms-2"></i></a></div></div></section>
+  </main>
+
+  <footer class="ls-footer"><div class="container"><div class="row g-4 align-items-center"><div class="col-lg-6"><a class="navbar-brand fw-bold text-white" href="index.html"><i class="bi bi-shield-shaded text-brand me-2"></i>LAN <span class="text-brand">Sentinel</span></a><p class="mt-3 mb-0">Development of an AI-Based Network Intrusion Detection System for Local Area Networks Using Traffic Anomaly Analysis.</p></div><div class="col-lg-6 text-lg-end"><a href="pages/about.html">About</a><a href="pages/literature.html">Literature</a><a href="pages/contact.html">Contact</a><a href="pages/login.html">Login</a></div></div><div class="ls-footer-bottom"><span>© 2026 LAN Sentinel · Academic research project</span><span>Black & red. Built for network awareness.</span></div></div></footer>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Close the mobile navigation after a section link is selected.
+    document.querySelectorAll('#mainNav a[href^="#"]').forEach(link => link.addEventListener('click', () => {
+      const nav = document.getElementById('mainNav');
+      if (nav.classList.contains('show') && window.bootstrap) bootstrap.Collapse.getOrCreateInstance(nav).hide();
+    }));
+    // Highlight the current in-page section while scrolling.
+    const sectionLinks = [...document.querySelectorAll('#mainNav a[href^="#"]')];
+    const sectionObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) sectionLinks.forEach(link => link.classList.toggle('active', link.hash === '#' + entry.target.id));
+    }), { rootMargin: '-25% 0px -65% 0px' });
+    document.querySelectorAll('main section[id]').forEach(section => sectionObserver.observe(section));
+  </script>
 </body>
 </html>
