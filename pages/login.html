@@ -280,16 +280,24 @@
       );
     });
 
-    // Demo login
+    // Front-end account check. For production, replace this with secure server authentication.
     document.getElementById("loginForm").addEventListener("submit", function (event) {
       event.preventDefault();
+      const email = document.getElementById("email").value.trim().toLowerCase();
+      const password = document.getElementById("password").value;
+      const account = JSON.parse(localStorage.getItem("lanSentinelAccount") || "null");
+      if (!account || account.email !== email || account.password !== password) {
+        alert("Account not found or password is incorrect. Please sign up first or check your details.");
+        return;
+      }
+      localStorage.setItem("lanSentinelAuthenticated", "true");
+      localStorage.setItem("lanSentinelUser", JSON.stringify({name: account.name, email: account.email, role: account.role}));
       window.location.href = "dashboard.html";
     });
 
-    // Demo forgot password
     document.getElementById("forgotPassword").addEventListener("click", function (event) {
       event.preventDefault();
-      alert("Password recovery is not available in this demo.");
+      alert("Password recovery requires a configured account service. Please contact your system administrator.");
     });
   </script>
 </body>
